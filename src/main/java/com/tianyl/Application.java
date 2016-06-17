@@ -14,7 +14,7 @@ public class Application {
 		FooBean foo = context.getBean(FooBean.class);
 		System.out.println(foo.getName());
 
-		context.close();
+		// context.close();
 	}
 
 }
