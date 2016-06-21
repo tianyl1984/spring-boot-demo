@@ -1,9 +1,17 @@
 package com.tianyl.entity;
 
-public class Bar {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "bar")
+public class BarEntity extends BaseEntity {
+
+	@Column(name = "name")
 	private String name;
 
+	@Column(name = "age")
 	private Integer age;
 
 	public String getName() {
