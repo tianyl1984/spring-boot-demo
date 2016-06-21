@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import com.tianyl.bean.FooBean;
 
 @SpringBootApplication
-@EntityScan(basePackages = { "com.tianyl.entity" })
+@EntityScan(basePackages = { "com.tianyl" })
 public class Application {
 
 	public static void main(String[] args) throws Exception {
