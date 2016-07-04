@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index</title>
+</head>
+<body>
+	<p>request中对象(1):$WebContextHolder.getRequest().getAttribute("bar").name</p>
+	<p>request中对象(2):$bar.name</p>
+	<hr>
+		<p>$DemoToolUtil.m1()</p>
+	<hr>
+		#hr()
+</body>
+</html>

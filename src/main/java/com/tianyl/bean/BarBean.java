@@ -12,4 +12,13 @@ public class BarBean {
 		this.name = name;
 	}
 
+	public BarBean(String name) {
+		super();
+		this.name = name;
+	}
+
+	public BarBean() {
+		super();
+	}
+
 }
