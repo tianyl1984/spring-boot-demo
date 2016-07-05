@@ -12,6 +12,16 @@
 	<hr>
 		<p>$DemoToolUtil.m1()</p>
 	<hr>
+		<p>#set($a="abc")$a</p>
+		<p>#set($b="abc")$b</p>
+		<p>#set($c = ($a == $b))$c</p>
+		#if("$!tt" == "")
+		#set($d = true)
+		#else
+		#set($d = false)
+		#end
+		<p>$d</p>
+		<p>a$!{tt}b</p>
 		#hr()
 </body>
 </html>
