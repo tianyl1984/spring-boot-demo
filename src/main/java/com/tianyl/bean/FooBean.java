@@ -11,6 +11,10 @@ public class FooBean {
 
 	private Integer age;
 
+	private String privateFooName;
+
+	private String privateabcFooName;
+
 	public String getName() {
 		return name;
 	}
@@ -25,6 +29,22 @@ public class FooBean {
 
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+	public String getPrivateFooName() {
+		return privateFooName;
+	}
+
+	public void setPrivateFooName(String privateFooName) {
+		this.privateFooName = privateFooName;
+	}
+
+	public String getPrivateabcFooName() {
+		return privateabcFooName;
+	}
+
+	public void setPrivateabcFooName(String privateabcFooName) {
+		this.privateabcFooName = privateabcFooName;
 	}
 
 }
