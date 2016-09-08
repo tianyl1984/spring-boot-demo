@@ -16,6 +16,9 @@ public class BarService {
 	@Autowired
 	private BarRepository barRepository;
 
+	@Autowired
+	private UserService userService;
+
 	public List<BarEntity> findAll() {
 		return barRepository.findAll();
 	}
