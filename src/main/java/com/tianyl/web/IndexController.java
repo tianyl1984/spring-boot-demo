@@ -68,4 +68,11 @@ public class IndexController {
 		System.out.println("Controller内再次读取body：" + str);
 		return "read body ok";
 	}
+
+	@RequestMapping("errorDemo")
+	public Object errorDemo() throws Exception {
+		// new ArrayList<String>().get(1);
+		Class.forName("bbbbbbbbbbbbb");
+		return "ok";
+	}
 }

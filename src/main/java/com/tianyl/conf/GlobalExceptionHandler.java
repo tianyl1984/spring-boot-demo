@@ -37,7 +37,6 @@ public class GlobalExceptionHandler {
 		// mav.addAllObjects(ResponseJsonUtils.getUnknowErrorMap("错误：" + e.getMessage()));
 		// mav.setView(new MappingJackson2JsonView());
 		}
-
 		return mav;
 	}
 
