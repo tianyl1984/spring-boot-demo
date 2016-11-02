@@ -10,8 +10,6 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import com.tianyl.utils.WebUtil;
-
 @Configuration
 public class MvcConfig extends WebMvcConfigurerAdapter {
 
@@ -26,8 +24,8 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
 			@Override
 			public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-				String body = WebUtil.readBody(request);
-				System.out.println("preHandle body:" + body);
+				// String body = WebUtil.readBody(request);
+				// System.out.println("preHandle body:" + body);
 				return true;
 			}
 

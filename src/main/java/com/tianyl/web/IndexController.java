@@ -1,5 +1,6 @@
 package com.tianyl.web;
 
+import java.util.Date;
 import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.tianyl.bean.BarBean;
 import com.tianyl.bean.User;
 import com.tianyl.bean.UserInfo;
+import com.tianyl.utils.DateUtil;
 import com.tianyl.utils.WebContextHolder;
 import com.tianyl.utils.WebUtil;
 
@@ -75,4 +77,11 @@ public class IndexController {
 		Class.forName("bbbbbbbbbbbbb");
 		return "ok";
 	}
+
+	@RequestMapping("aaa")
+	@ResponseBody
+	public Object aaa(Date d) {
+		return "ok:" + DateUtil.format(d);
+	}
+
 }
