@@ -16,9 +16,9 @@ import java.util.List;
 
 public class SqlHelper {
 
-	public static void main(String[] args) throws Exception {
-		printSql();
-	}
+	// public static void main(String[] args) throws Exception {
+	// printSql();
+	// }
 
 	public static String getSqlValue(String val) {
 		return val.replaceAll("'", "''");

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.tianyl.bean.FooBean;
+import com.tianyl.mapper.BarMapper;
 
 @SpringBootApplication
 @EntityScan(basePackages = { "com.tianyl" })
@@ -13,7 +13,9 @@ public class Application {
 
 	public static void main(String[] args) throws Exception {
 		ConfigurableApplicationContext context =  SpringApplication.run(Application.class, args);
-		context.getBean(FooBean.class).getName();
+		BarMapper barMapper = context.getBean(BarMapper.class);
+		System.out.println(barMapper);
+		System.out.println(barMapper.selectAll());
 	}
 
 }

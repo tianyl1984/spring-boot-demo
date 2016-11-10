@@ -12,10 +12,10 @@ import com.mongodb.DBObject;
 
 public class MongoMigrate2Mysql {
 
-	public static void main(String[] args) throws Exception {
+	// public static void main(String[] args) throws Exception {
 		// m1();
-		m2();
-	}
+	// m2();
+	// }
 
 	private static void m2() throws Exception {
 		DBCollection coll = MongoUtil.getDbCollection("172.16.40.29", "wooyun", "wooyun_list");
