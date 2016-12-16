@@ -4,7 +4,30 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script charset="utf-8" type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
     <title>index</title>
+	<script>
+		
+		function ajaxTest(){
+			$.get("/ajaxStr",function(data){
+				alert("result:" + data);
+			});
+		}
+	
+		$(document).ready(function(){
+
+		});
+		
+		function addFilter(){
+			$.ajaxSetup({
+                dataFilter: function (data, type) {
+                	alert("filter:" + data + ",url:" + this.url);
+                    return data;
+                }
+            });
+		}
+		
+	</script>
 </head>
 <body>
 	<p>request中对象(1):$WebContextHolder.getRequest().getAttribute("bar").name</p>
@@ -23,5 +46,7 @@
 		<p>$d</p>
 		<p>a$!{tt}b</p>
 		#hr()
+	<input type="button" value="AddFilter" onclick="addFilter()">
+	<input type="button" value="ajaxTest" onclick="ajaxTest()">
 </body>
 </html>
