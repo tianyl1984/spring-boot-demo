@@ -3,7 +3,9 @@ package com.tianyl.web;
 import java.util.Date;
 import java.util.Set;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.tianyl.bean.BarBean;
 import com.tianyl.bean.User;
@@ -82,6 +85,41 @@ public class IndexController {
 	@ResponseBody
 	public Object aaa(Date d) {
 		return "ok:" + DateUtil.format(d);
+	}
+
+	@RequestMapping("flashDemo")
+	public Object flashDemo(RedirectAttributes redirectAttributes) {
+		redirectAttributes.addFlashAttribute("prompt", "success");
+		return "redirect:/index";
+	}
+
+	@RequestMapping("cookieTest")
+	public Object cookieTest(HttpServletRequest request, HttpServletResponse response) {
+		// addCookie(response);
+		// addCookie2(response);
+		delCookie(response);
+		return "/index";
+	}
+
+	private void addCookie(HttpServletResponse response) {
+		Cookie cookie = new Cookie("aaa", "a_val");
+		cookie.setPath("/");
+		cookie.setMaxAge(60);
+		response.addCookie(cookie);
+	}
+
+	private void addCookie2(HttpServletResponse response) {
+		Cookie cookie = new Cookie("bbb", "b_val");
+		cookie.setPath("/");
+		cookie.setMaxAge(60);
+		response.addCookie(cookie);
+	}
+
+	private void delCookie(HttpServletResponse response) {
+		Cookie cookie = new Cookie("aaa", null);
+		cookie.setPath("/");
+		cookie.setMaxAge(0);// 删除
+		response.addCookie(cookie);
 	}
 
 }

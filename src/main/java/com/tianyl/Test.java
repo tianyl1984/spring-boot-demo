@@ -11,12 +11,13 @@ import com.alibaba.fastjson.JSONObject;
 
 public class Test {
 
-	public static void main(String[] args) throws Exception {
-		// m1();
-		String msg = "{\"message\":\"success\",\"status\":200}";
-		String str = JSONObject.parseObject(msg).getString("status");
-		System.out.println("200".equals(str));
-	}
+	// public static void main(String[] args) throws Exception {
+	// System.out.println("a:aa|".split("\\|")[0]);
+	// // m1();
+	// String msg = "{\"message\":\"success\",\"status\":200}";
+	// String str = JSONObject.parseObject(msg).getString("status");
+	// System.out.println("200".equals(str));
+	// }
 
 	private static void m1() throws Exception {
 		String path = "C:\\Users\\user\\Desktop\\aa\\fe_teacher";

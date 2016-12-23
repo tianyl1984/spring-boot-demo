@@ -13,6 +13,7 @@ public class WebContextHolderListener implements ServletRequestListener {
 	@Override
 	public void requestInitialized(ServletRequestEvent sre) {
 		sre.getServletRequest();
+		// System.out.println("requestInitialized");
 	}
 
 }

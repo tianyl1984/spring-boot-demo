@@ -48,5 +48,8 @@
 		#hr()
 	<input type="button" value="AddFilter" onclick="addFilter()">
 	<input type="button" value="ajaxTest" onclick="ajaxTest()">
+	<hr>
+	$!prompt
+	<hr>
 </body>
 </html>

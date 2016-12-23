@@ -16,11 +16,11 @@
 
 	<!-- Add typical dependencies for a web application -->
 	<dependencies>
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.springframework.boot</groupId> -->
-<!-- 			<artifactId>spring-boot-starter-dubbo</artifactId> -->
-<!-- 			<version>1.3.6.RELEASE</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-dubbo</artifactId> -->
+		<!-- <version>1.3.6.RELEASE</version> -->
+		<!-- </dependency> -->
 
 		<dependency>
 			<groupId>com.tianyl.starter</groupId>
@@ -63,6 +63,10 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-data-redis</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -113,9 +117,9 @@
 	</build>
 	<repositories>
 		<repository>
-			<id>tianyl-repo</id>
-			<name>tianyl-repo</name>
-			<url>https://raw.githubusercontent.com/tianyl1984/maven-repo/master</url>
+			<id>github-repo</id>
+			<name>github-repo</name>
+			<url>https://raw.githubusercontent.com/mvnRepo/maven-repo/master</url>
 		</repository>
 	</repositories>
 </project>
