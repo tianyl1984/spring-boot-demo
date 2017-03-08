@@ -1,5 +1,7 @@
 package com.tianyl.web;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.util.Set;
 
@@ -13,7 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.tianyl.bean.BarBean;
@@ -99,6 +103,25 @@ public class IndexController {
 		// addCookie2(response);
 		delCookie(response);
 		return "/index";
+	}
+
+	@RequestMapping("requestTest")
+	@ResponseBody
+	public Object requestTest(HttpServletRequest request, @RequestParam("file") MultipartFile file) {
+		WebUtil.printHeader(request);
+		WebUtil.printParameter(request);
+		try {
+			file.transferTo(new File("C:\\Users\\user\\Desktop\\456.png"));
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(file.getSize());
+		// WebUtil.readBody(request);
+		return "ok";
 	}
 
 	private void addCookie(HttpServletResponse response) {
